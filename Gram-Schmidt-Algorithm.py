@@ -1,6 +1,6 @@
 import numpy as np
 
-A = np.random.rand(5,5)
+A = np.random.rand(5,5) #randomly generate a matrix for testing
 
 def gram_schmidt(A):
     
@@ -24,10 +24,8 @@ def gram_schmidt(A):
 
             previous_orthogonal = orthogonal_basis[ortho_count - 1]
             current_orthogonal = current_orthogonal - np.dot(((np.dot(current_column_vector.T, previous_orthogonal)) / (np.dot(previous_orthogonal.T, previous_orthogonal))), previous_orthogonal)
-            #print("hello: ",current_orthogonal)
 
         orthogonal_basis.append(current_orthogonal)
-        #print(current_orthogonal, "\n")
 
     orthonormal_basis = []
     
